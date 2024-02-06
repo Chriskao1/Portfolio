@@ -26,7 +26,7 @@ while True:
     spring_axis_unit = spring_axis / b[:, np.newaxis] #每個彈簧軸方向的單位向量
     fs = - k * (spring_axis - d*spring_axis_unit)     #每個彈簧的作用力
     fs[b<=d] = 0                                      #彈簧長度小於原長設為零，表示繩子的鬆弛狀態
-    ball_v[1:] += (fs[:-1] - fs[0:])/m*dt + ball_g[1:]*dt - 5.0*ball_v[1:]*dt    
+    ball_v[1:-1] += (fs[:-1] - fs[1:])/m*dt + ball_g[1:-1]*dt - 5.0*ball_v[1:-1]*dt    
                                                       #計算第二個~倒數第二個球的速度
     ball_pos += ball_v *dt                            #計算球的位置
     if T + dt >50*dt and T < 50*dt:
