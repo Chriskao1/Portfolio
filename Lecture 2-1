@@ -1,7 +1,7 @@
 from vpython import *
 #Web VPython 3.2
 
-size=1.5
+size=1.5 
 scene = canvas(width=600, height=600, center = vector(0,5,0)) #設定畫面
 floor = box(length=150, height=0.01, width=50, color=color.green)      #畫地板
 bally = sphere(radius = size, color=color.yellow, make_trail= True, trail_type="points", interval=100)
