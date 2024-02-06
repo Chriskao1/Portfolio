@@ -6,7 +6,7 @@ size = 0.05             #球半徑 0.05 m
 L = 0.5                 #彈簧原長 0.5m
 k = 10                  #彈簧力常數 10 N/m
 m = 0.1                 #球質量 0.1 kg
-Fg = m*vector(0,-g,0)   #球所受重力向量
+Fg = m*vector(0,-g,0)   #球所受重力向量 
 
 def SpringForce(r,L):
     return -k*(mag(r)-L)*r/mag(r)
