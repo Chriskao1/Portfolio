@@ -1,4 +1,4 @@
-from vpython import *
+from vpython import *  
 #Web VPython 3.2
 
 g = 9.8                 #重力加速度 9.8 m/s^2
